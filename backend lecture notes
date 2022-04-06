@@ -10,3 +10,5 @@ we should define well each step and the transitions between the steps so we can 
 we need to divide our flow into blocks so different ppl can work on them but also that they don't depend on each other too much so we can work at the same time
 
 make our data (from running, to find mistake etc) accessible (just spewing it into logs might not be the best ..)
+
+just checking i can commit- Shir
