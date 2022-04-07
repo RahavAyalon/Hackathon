@@ -1,1 +1,2 @@
 class WebPageScraper(object):
+    pass
