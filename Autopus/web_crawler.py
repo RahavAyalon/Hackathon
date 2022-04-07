@@ -56,16 +56,20 @@ GUARDIAN_API_ENDPOINT = 'http://content.guardianapis.com/search'
 
 
 class CrawlerManager:
-
     def __init__(self, required_fields_list):
         self.required_fields_dict = {field: i for i, field in enumerate(required_fields_list)}
 
     def create_minimized_articles_list(self, original_articles_list):
+        """
+
+        :param original_articles_list: list of articles- each is a json dict with ALL the field extracted
+        :return: list of lists with only the relevant feilds from each article
+        """
         minimized = []
         for article_json in original_articles_list:
-            article_list = [0] * len(self.required_fields_dict)
+            article_list = [0] * len(self.required_fields_dict)  # creates "empty" list with the size of the minimized list
             for field, i in self.required_fields_dict.items():
-                article_list[i] = article_json[field]
+                article_list[i] = article_json["fields"][field]  # relevant in the guardian json
             minimized.append(article_list)
         return minimized
 
