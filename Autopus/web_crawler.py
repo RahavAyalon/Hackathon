@@ -1,15 +1,5 @@
-import logging
-from urllib.parse import urljoin
 import requests
-import web_page_scraper, bs4
-import json
-from os import makedirs
-from os.path import join, exists
 from datetime import date, timedelta
-
-GUARDIAN_API_KEY = "92ecbb3d-1602-42b3-acdb-e0a9d166e354"
-GUARDIAN_API_ENDPOINT = 'http://content.guardianapis.com/search'
-
 
 class WebCrawler(object):
     """
@@ -53,6 +43,3 @@ class WebCrawler(object):
             self.get_articles_from_cur_page()
             self.next_page()
         return self.articles
-
-if __name__ == '__main__':
-    pass
