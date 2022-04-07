@@ -2,6 +2,8 @@ import React from 'react';
 import { Table } from 'react-bootstrap';
 
 import Box from '@material-ui/core/Box';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export default function Data() {
   return (
@@ -14,6 +16,13 @@ export default function Data() {
           width: '80%',
         }}
       >
+        <Link to="/meta_data.xlsx" target="_blank" download>
+          Download Meta Data
+        </Link>
+        <Link to="/contents_by_sentence.xlsx" target="_blank" download>
+          Download Parsed Content
+        </Link>
+
         <Box color="white" p={1}>
           <Table striped bordered hover size="sm">
             <thead>
