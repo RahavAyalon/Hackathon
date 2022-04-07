@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, FormControl, InputGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 export default function InputButton() {
   return (
     <InputGroup className="mb-3">
@@ -9,7 +10,7 @@ export default function InputButton() {
         aria-describedby="basic-addon2"
       />
       <Button variant="outline-secondary" id="button-addon2">
-        Go
+        <Link to="/filtering">Go</Link>
       </Button>
     </InputGroup>
   );
