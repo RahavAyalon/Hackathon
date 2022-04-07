@@ -9,7 +9,6 @@ function App() {
     <Router>
       <div>
         <NavbarComponent />
-
         <Routes>
           <Route exact path="/filtering" element={<Header />} />
           <Route exact path="/" element={<Main />} />

@@ -6,10 +6,14 @@ export default function Button() {
     <>
       <div className="Buttons">
         <button class={'btn1'}>
-          <Link to="/headers">Sky News</Link>
+          <Link to="/filtering">Sky News</Link>
         </button>
-        <button class={'btn1'}>The Guardian</button>
-        <button class={'btn1'}>Al Jazeera</button>
+        <button class={'btn1'}>
+          <Link to="/headers">The Guardian</Link>
+        </button>
+        <button class={'btn1'}>
+          <Link to="/headers">Al Jazeera</Link>
+        </button>
       </div>
     </>
   );
