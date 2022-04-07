@@ -7,54 +7,52 @@ from os import makedirs
 from os.path import join, exists
 from datetime import date, timedelta
 
+GUARDIAN_API_KEY = "92ecbb3d-1602-42b3-acdb-e0a9d166e354"
+GUARDIAN_API_ENDPOINT = 'http://content.guardianapis.com/search'
+
+
 class WebCrawler(object):
-    def __init__(self, urls):
-        self.visited_urls = []
-        self.urls_to_visit =urls
-        self.scraper = web_page_scraper.WebPageScraper()
+    """
 
-    def get_linked_urls(self, url, html):
-        soup = bs4.BeautifulSoup(html, 'html.parser')
-        for link in soup.find_all('a'):
-            path = link.get('href')
-            if path and path.startswith('/'):
-                path = urljoin(url, path)
-            yield path
+    """
+    def __init__(self, website, key, articles_per_page, number_of_pages=1):
+        self.endpoint = website
+        self.params = {
+            'order-by': "newest",
+            'show-fields': 'all',
+            'page-size': articles_per_page,
+            'api-key': key }
+        self.current_page = 1
+        self.number_of_pages = number_of_pages
+        self.articles = []
 
-    def add_url_to_visit(self, url):
-        if url not in self.visited_urls and url not in self.urls_to_visit:
-            self.urls_to_visit.append(url)
+    def define_date_range(self, from_date, to_date):
+        # self.params[]
+        pass
 
-    def crawl(self, url):
-        html = self.scraper.retrieve_html_from_url(url)
-        for url in self.get_linked_urls(url, html):
-            self.add_url_to_visit(url)
+    def get_articles_from_cur_page(self):
+        """
+        adds the next NUM_OF_ARTICLES_PER_PAGE to the articles list
+        """
+        result = requests.get(self.endpoint, self.params)
+        self.articles += result.json()["response"]['results']
+
+    def next_page(self):
+        """
+        changes the page of results to the next page
+        """
+        self.current_page += 1
+        self.params["page"] = self.current_page
 
     def run(self):
-        while self.urls_to_visit:
-            url = self.urls_to_visit.pop(0)
-            logging.info(f'Crawling: {url}')
-            try:
-                self.crawl(url)
-            except Exception:
-                logging.exception(f'Failed to crawl: {url}')
-            finally:
-                self.visited_urls.append(url)
+        """
+
+        :return: list of json per article
+        """
+        while self.current_page < self.number_of_pages:
+            self.get_articles_from_cur_page()
+            self.next_page()
+        return self.articles
 
 if __name__ == '__main__':
-    http://content.guardianapis.com/search?from-date=2016-01-02&
-    to-date=2016-01-02&order-by=newest&show-fields=all&page-size=200
-    &api-key=92ecbb3d-1602-42b3-acdb-e0a9d166e354
-    API_KEY = "92ecbb3d-1602-42b3-acdb-e0a9d166e354"
-    my_params = {
-    # 'from-date': "",
-    # 'to-date': "",
-    'order-by': "newest",
-    'show-fields': 'all',
-    'page-size': 200,
-    'api-key': API_KEY }
-    API_ENDPOINT = 'http://content.guardianapis.com/search'
-    # my_params['from-date'] = date()
-    results = requests.get(API_ENDPOINT, my_params)
-    results.json()
-    print(results.json())
+    pass
