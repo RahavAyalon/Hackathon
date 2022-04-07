@@ -3,7 +3,7 @@ import React from 'react';
 export default function Header() {
   return (
     <>
-      <div>Autopus</div>
+      <div className={"header"}>Autopus</div>
       <input type="text" />
       <button>Sky News</button>
       <button>The Guardian</button>

@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+*{
+  font-family: Ubuntu;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -26,6 +28,18 @@
 
 .App-link {
   color: #61dafb;
+}
+button{
+  padding: 5px;
+  margin: 20px;
+  alignment: center;
+}
+.header{
+  color: #005f73;
+  padding-left: 50px;
+  padding-right: 50px;
+  align-content: center;
+  alignment: center;
 }
 
 @keyframes App-logo-spin {
