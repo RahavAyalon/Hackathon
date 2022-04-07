@@ -3,10 +3,10 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import image from './Logo.png';
 export default function NavbarComponent() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar class={"navbar"} bg="light" expand="lg">
       <Container>
         <img src={image} height={40} width={35} />
-        <Navbar.Brand id={'autopus'} href="/">
+        <Navbar.Brand id={"autopus"} href="/">
           Autopus
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

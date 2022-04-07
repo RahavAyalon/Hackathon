@@ -84,11 +84,13 @@ export default function Filtering() {
             moveRangeOnFirstSelection={false}
             ranges={state}
           />
+          <container class={"centered"}>
+              <Button class={"btn1 linkstyle"}>
+            <Link to="/data">Go</Link>
+      </Button>
+          </container>
         </div>
       </div>
-      <Button variant="light" id={"goButton"}>
-        <Link to="/data">Go</Link>
-      </Button>
     </>
   );
 }
