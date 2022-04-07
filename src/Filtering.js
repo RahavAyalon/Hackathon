@@ -2,10 +2,10 @@ import React from 'react';
 import { Form } from 'react-bootstrap';
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-import { DateRangePicker } from 'react-date-range';
-import { Calendar, DateRange } from 'react-date-range';
-
+import { DateRange } from 'react-date-range';
+import { Button } from 'react-bootstrap';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Filtering() {
   const [state, setState] = useState([
@@ -17,9 +17,9 @@ export default function Filtering() {
   ]);
 
   return (
+    <>
       <div class="parent">
         <div class="div3">
-          {' '}
           <Form>
             {['checkbox'].map((type) => (
               <>
@@ -86,5 +86,9 @@ export default function Filtering() {
           />
         </div>
       </div>
+      <Button variant="light">
+        <Link to="/data">Go</Link>
+      </Button>
+    </>
   );
 }
