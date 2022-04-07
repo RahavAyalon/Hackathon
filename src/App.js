@@ -1,5 +1,5 @@
 import './App.css';
-import Header from './Header';
+import Filtering from './Filtering';
 import Main from './Main';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,7 +10,7 @@ function App() {
       <div>
         <NavbarComponent />
         <Routes>
-          <Route exact path="/filtering" element={<Header />} />
+          <Route exact path="/filtering" element={<Filtering />} />
           <Route exact path="/" element={<Main />} />
         </Routes>
       </div>

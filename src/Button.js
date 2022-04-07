@@ -9,10 +9,10 @@ export default function Button() {
           <Link to="/filtering">Sky News</Link>
         </button>
         <button class={'btn1'}>
-          <Link to="/headers">The Guardian</Link>
+          <Link to="/filtering">The Guardian</Link>
         </button>
         <button class={'btn1'}>
-          <Link to="/headers">Al Jazeera</Link>
+          <Link to="/filtering">Al Jazeera</Link>
         </button>
       </div>
     </>
