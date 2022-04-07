@@ -6,13 +6,13 @@ SPACE_CHAR = " "
 fields = ["headline","firstPublicationDate","byline","shortUrl","bodyText"]
 end_point= "http://content.guardianapis.com/search"
 key = "92ecbb3d-1602-42b3-acdb-e0a9d166e354"
-pages = 5
+pages = 1
 
 
 class Autopus:
     def __init__(self):
         self.UI = ""
-        required_fields_list = ["headline","firstPublicationDate","byline","shortUrl","bodyText"] # from ui
+        required_fields_list = ["headline","firstPublicationDate","byline","shortUrl" ,"bodyText"] # from ui
         self.fields = required_fields_list # from ui
         self.required_fields_dict = {field: i for i, field in enumerate(required_fields_list)}
         # fields, end_point, key = from UI
@@ -20,11 +20,11 @@ class Autopus:
         self.articles_list = self.backend_manager.manage_crawling()
 
     def write_to_excel(self, path):
-        final_file = ",".join(self.fields) + "\n"
-        for art in self.articles_list:
-            final_file += ",".join(['"""' + fld + '"""' for fld in art ]) + "\n"
-        with open(path + ".csv", "w") as f:
-            f.write(final_file)
+        with open(path + ".csv", "w", encoding="utf-8", newline='') as f:
+            writer = csv.writer(f, dialect='excel')
+            writer.writerow(self.fields)
+            writer.writerows(self.articles_list)
+
 
     def parse_article_body(self, article_body):
         """
@@ -36,4 +36,4 @@ class Autopus:
 
 #TODO TODO
 aut = Autopus()
-aut.write_to_excel("test")
+aut.write_to_excel("test4")
