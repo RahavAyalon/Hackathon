@@ -1,0 +1,2 @@
+class WebCrawler(object):
+    pass
