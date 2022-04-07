@@ -28,19 +28,12 @@ class Autopus:
 
     def parse_article_body(self, article_body):
         """
-        :param article_body:
-        :return: the required separated str
+        :param article_body: text of the body of a certain article
+        :return: a list of the separated sentences of the article
         """
-        article_txt = article_body.replace('. ', '.\n')
-        # article_txt = article_txt.replace(NON_BREAKING_SPACE_UNICODE, SPACE_CHAR)
-        sentences_list = article_txt.split('\n')
-        for i in range(len(sentences_list)):
-            while sentences_list[i][0] == SPACE_CHAR:
-                sentences_list[i] = sentences_list[i][1:]       # cutting initial spaces
-            while sentences_list[i][-1] == SPACE_CHAR:
-                sentences_list[i] = sentences_list[i][:-1]      # cutting final spaces
-        return sentences_list
+        pattern = "(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?|!|\")\s"
+        return re.split(pattern, article_body)
 
-
+#TODO TODO
 aut = Autopus()
 aut.write_to_excel("test")
