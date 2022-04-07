@@ -12,7 +12,13 @@ class CrawlerManager:
         self.number_of_pages = number_of_pages
 
     def create_minimized_articles_list(self, original_articles_list):
-        pass
+        minimized = []
+        for article_json in original_articles_list:
+            article_list = [0] * len(self.required_fields_dict)
+            for field, i in self.required_fields_dict.items():
+                article_list[i] = article_json[field]
+            minimized.append(article_list)
+        return minimized
 
     def write_to_excel(self):
         pass
