@@ -11,6 +11,7 @@ export default function Button() {
         <button class={"btn1 linkstyle"}>
           <Link to="/filtering">The Guardian</Link>
         </button>
+        {/*<a href="something" className="button1">Button</a>*/}
         <button class={"btn1 linkstyle"}>
           <Link to="/filtering">Al Jazeera</Link>
         </button>

@@ -19,7 +19,7 @@ export default function Filtering() {
   return (
     <>
       <div class="parent">
-        <div class="div3">
+        <div class="div4">
           <Form>
             {['checkbox'].map((type) => (
               <>
@@ -76,7 +76,7 @@ export default function Filtering() {
             ))}
           </Form>
         </div>
-        <div class="div4">
+        <div class="div3">
           {' '}
           <DateRange
             editableDateInputs={true}
@@ -86,7 +86,7 @@ export default function Filtering() {
           />
         </div>
       </div>
-      <Button variant="light">
+      <Button variant="light" id={"goButton"}>
         <Link to="/data">Go</Link>
       </Button>
     </>
