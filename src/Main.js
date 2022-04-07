@@ -6,11 +6,11 @@ import { Container, Row } from 'react-bootstrap';
 
 export default function Main() {
   return (
-    <div className="website">
+    <div class="parent">
       <Container>
         <Row className="d-flex">
-          <Button />
-          <InputButton />
+                <InputButton class={"div2"} />
+                <Button class={"div1"}/>
         </Row>
       </Container>
     </div>

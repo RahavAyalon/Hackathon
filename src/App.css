@@ -1,6 +1,22 @@
 *{
   font-family: Ubuntu;
 }
+.website{
+  /*display: flex;*/
+}
+
+
+.btn1{
+  padding: 5px;
+  margin: 10px;
+}
+.mb-3{
+  padding: 20px;
+}
+#button-addon2{
+  text-decoration: none;
+}
+
 #autopus{
   color: grey;
   margin-left: 15px;
