@@ -2,27 +2,29 @@ import web_crawler
 
 
 class CrawlerManager:
-    # NUMBER_OF_PAGES = 5              # the user decides
-    # ARTICLES_PER_PAGE = 200
-    # GUARDIAN_API_KEY = "92ecbb3d-1602-42b3-acdb-e0a9d166e354"
-    # GUARDIAN_API_ENDPOINT = 'http://content.guardianapis.com/search'
-    # USER_REQUIRED_FIELDS_LIST = ["headline", "webPublicationDate"]
 
-    def __init__(self, required_fields_list):
-        self.required_fields_list = required_fields_list
+    ARTICLES_PER_PAGE = 200
+
+    def __init__(self, required_fields_list, web_endpoint, api_key, number_of_pages):
+        self.required_fields_dict = {field: i for i, field in enumerate(required_fields_list)}
+        self.web_endpoint = web_endpoint
+        self.api_key = api_key
+        self.number_of_pages = number_of_pages
 
     def create_minimized_articles_list(self, original_articles_list):
-        pass
+        minimized = []
+        for article_json in original_articles_list:
+            article_list = [0] * len(self.required_fields_dict)
+            for field, i in self.required_fields_dict.items():
+                article_list[i] = article_json[field]
+            minimized.append(article_list)
+        return minimized
 
     def write_to_excel(self):
         pass
 
     def manage_crawling(self):
-        crawler = web_crawler.WebCrawler(GUARDIAN_API_ENDPOINT, GUARDIAN_API_KEY, ARTICLES_PER_PAGE,
-                              NUMBER_OF_PAGES)
+        crawler = web_crawler.WebCrawler(self.web_endpoint, self.api_key,
+                                         self.ARTICLES_PER_PAGE, self.number_of_pages)
         articles_list = crawler.run()                # a list of dictionaries
-        minimized_list = create_minimized_articles_list(articles_list)
-
-
-
-
+        minimized_list = self.create_minimized_articles_list(articles_list)
