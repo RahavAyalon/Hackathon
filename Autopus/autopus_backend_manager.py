@@ -20,7 +20,10 @@ class CrawlerManager:
         for article_json in original_articles_list:
             article_list = [0] * len(self.required_fields_dict)  # creates "empty" list with the size of the minimized list
             for field, i in self.required_fields_dict.items():
-                article_list[i] = article_json["fields"][field]  # relevant in the guardian json
+                if field in article_json["fields"]:
+                    article_list[i] = article_json["fields"][field]  # relevant in the guardian json
+                else:
+                    article_list[i] = "None"
             minimized.append(article_list)
         return minimized
 
@@ -33,3 +36,4 @@ class CrawlerManager:
                                          self.ARTICLES_PER_PAGE, self.number_of_pages)
         articles_list = crawler.run()                # a list of dictionaries
         minimized_list = self.create_minimized_articles_list(articles_list)
+        return minimized_list

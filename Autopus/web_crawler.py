@@ -39,7 +39,7 @@ class WebCrawler(object):
 
         :return: list of json per article
         """
-        while self.current_page < self.number_of_pages:
+        while self.current_page <= self.number_of_pages:
             self.get_articles_from_cur_page()
             self.next_page()
         return self.articles
