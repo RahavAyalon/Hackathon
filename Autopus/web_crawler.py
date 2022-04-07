@@ -25,6 +25,7 @@ class WebCrawler(object):
         adds the next NUM_OF_ARTICLES_PER_PAGE to the articles list
         """
         result = requests.get(self.endpoint, self.params)
+        result.encoding = "unicode"
         self.articles += result.json()["response"]['results']
 
     def next_page(self):
