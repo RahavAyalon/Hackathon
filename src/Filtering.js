@@ -18,63 +18,75 @@ export default function Filtering() {
 
   return (
     <>
-      <DateRange
-        editableDateInputs={true}
-        onChange={(item) => setState([item.selection])}
-        moveRangeOnFirstSelection={false}
-        ranges={state}
-      />
-      <Form>
-        {['checkbox'].map((type) => (
-          <>
-            <div key={`default-${type}`} className="mb-3">
-              <Form.Check
-                type={type}
-                id={`default-${type}`}
-                label={`Websites`}
-              />
-            </div>
-            <div key={`default-${type}`} className="mb-3">
-              <Form.Check type={type} id={`default-${type}`} label={`Links`} />
-            </div>
-            <div key={`default-${type}`} className="mb-3">
-              <Form.Check
-                type={type}
-                id={`default-${type}`}
-                label={`Comments`}
-              />
-            </div>
-            <div key={`default-${type}`} className="mb-3">
-              <Form.Check
-                type={type}
-                id={`default-${type}`}
-                label={`Headers`}
-              />
-            </div>
-            <div key={`default-${type}`} className="mb-3">
-              <Form.Check
-                type={type}
-                id={`default-${type}`}
-                label={`Sub-Headers`}
-              />
-            </div>
-            <div key={`default-${type}`} className="mb-3">
-              <Form.Check
-                type={type}
-                id={`default-${type}`}
-                label={`Contents`}
-              />
-            </div>
-            <div key={`default-${type}`} className="mb-3">
-              <Form.Check
-                type={type}
-                id={`default-${type}`}
-                label={`Writers`}
-              />
-            </div>
-          </>
-        ))}
-      </Form>
+      <div class="parent1">
+        <div class="div3">
+          {' '}
+          <Form>
+            {['checkbox'].map((type) => (
+              <>
+                <div key={`default-${type}`} className="mb-3">
+                  <Form.Check
+                    type={type}
+                    id={`default-${type}`}
+                    label={`Websites`}
+                  />
+                </div>
+                <div key={`default-${type}`} className="mb-3">
+                  <Form.Check
+                    type={type}
+                    id={`default-${type}`}
+                    label={`Links`}
+                  />
+                </div>
+                <div key={`default-${type}`} className="mb-3">
+                  <Form.Check
+                    type={type}
+                    id={`default-${type}`}
+                    label={`Comments`}
+                  />
+                </div>
+                <div key={`default-${type}`} className="mb-3">
+                  <Form.Check
+                    type={type}
+                    id={`default-${type}`}
+                    label={`Headers`}
+                  />
+                </div>
+                <div key={`default-${type}`} className="mb-3">
+                  <Form.Check
+                    type={type}
+                    id={`default-${type}`}
+                    label={`Sub-Headers`}
+                  />
+                </div>
+                <div key={`default-${type}`} className="mb-3">
+                  <Form.Check
+                    type={type}
+                    id={`default-${type}`}
+                    label={`Contents`}
+                  />
+                </div>
+                <div key={`default-${type}`} className="mb-3">
+                  <Form.Check
+                    type={type}
+                    id={`default-${type}`}
+                    label={`Writers`}
+                  />
+                </div>
+              </>
+            ))}
+          </Form>
+        </div>
+        <div class="div4">
+          {' '}
+          <DateRange
+            editableDateInputs={true}
+            onChange={(item) => setState([item.selection])}
+            moveRangeOnFirstSelection={false}
+            ranges={state}
+          />
+        </div>
+      </div>
     </>
   );
 }
