@@ -1,18 +1,21 @@
 import './App.css';
 import Header from './Header';
-import Logo from './Logo';
-import Button from './Button';
-
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Main from './Main';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavbarComponent from './Navbar';
 function App() {
   return (
-    <>
-      <div className="website"></div>
-      <Logo />
-      <Header />
-      <Button />
-      <div />
-    </>
+    <Router>
+      <div>
+        <NavbarComponent />
+
+        <Routes>
+          <Route exact path="/headers" element={<Header />} />
+          <Route exact path="/" element={<Main />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
