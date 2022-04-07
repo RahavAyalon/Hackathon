@@ -5,11 +5,11 @@ export default function Button() {
   return (
     <>
       <div className="Buttons">
-        <button class={"btn1"}>
+        <button class={'btn1'}>
           <Link to="/headers">Sky News</Link>
         </button>
-        <button class={"btn1"}>The Guardian</button>
-        <button class={"btn1"}>Al Jazeera</button>
+        <button class={'btn1'}>The Guardian</button>
+        <button class={'btn1'}>Al Jazeera</button>
       </div>
     </>
   );

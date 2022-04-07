@@ -11,7 +11,7 @@ function App() {
         <NavbarComponent />
 
         <Routes>
-          <Route exact path="/headers" element={<Header />} />
+          <Route exact path="/filtering" element={<Header />} />
           <Route exact path="/" element={<Main />} />
         </Routes>
       </div>
