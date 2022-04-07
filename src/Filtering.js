@@ -17,8 +17,7 @@ export default function Filtering() {
   ]);
 
   return (
-    <>
-      <div class="parent1">
+      <div class="parent">
         <div class="div3">
           {' '}
           <Form>
@@ -87,6 +86,5 @@ export default function Filtering() {
           />
         </div>
       </div>
-    </>
   );
 }

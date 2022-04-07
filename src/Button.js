@@ -5,13 +5,13 @@ export default function Button() {
   return (
     <>
       <div className="Buttons">
-        <button class={'btn1'}>
+        <button class={"btn1 linkstyle"}>
           <Link to="/filtering">Sky News</Link>
         </button>
-        <button class={'btn1'}>
+        <button class={"btn1 linkstyle"}>
           <Link to="/filtering">The Guardian</Link>
         </button>
-        <button class={'btn1'}>
+        <button class={"btn1 linkstyle"}>
           <Link to="/filtering">Al Jazeera</Link>
         </button>
       </div>
