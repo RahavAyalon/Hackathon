@@ -27,7 +27,7 @@ export default function Filtering() {
                   <Form.Check
                     type={type}
                     id={`default-${type}`}
-                    label={`Websites`}
+                    label={`Sections`}
                   />
                 </div>
                 <div key={`default-${type}`} className="mb-3">
@@ -69,7 +69,7 @@ export default function Filtering() {
                   <Form.Check
                     type={type}
                     id={`default-${type}`}
-                    label={`Writers`}
+                    label={`Authors`}
                   />
                 </div>
               </>
@@ -84,10 +84,10 @@ export default function Filtering() {
             moveRangeOnFirstSelection={false}
             ranges={state}
           />
-          <container class={"centered"}>
-              <Button class={"btn1 linkstyle"}>
-            <Link to="/data">Go</Link>
-      </Button>
+          <container class={'centered'}>
+            <Button class={'btn1 linkstyle'}>
+              <Link to="/data">Go</Link>
+            </Button>
           </container>
         </div>
       </div>
