@@ -1,4 +1,5 @@
 import autopus_backend_manager
+import re
 import csv
 
 SPACE_CHAR = " "
