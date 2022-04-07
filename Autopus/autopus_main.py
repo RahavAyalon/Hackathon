@@ -12,7 +12,7 @@ pages = 1
 class Autopus:
     def __init__(self):
         self.UI = ""
-        required_fields_list = ["headline","firstPublicationDate","byline","shortUrl" ,"bodyText"] # from ui
+        required_fields_list = ["headline", "firstPublicationDate", "byline", "shortUrl", "bodyText"] # from ui
         self.fields = required_fields_list # from ui
         self.required_fields_dict = {field: i for i, field in enumerate(required_fields_list)}
         # fields, end_point, key = from UI
