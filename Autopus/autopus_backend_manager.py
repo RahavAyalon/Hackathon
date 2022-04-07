@@ -27,10 +27,6 @@ class CrawlerManager:
             minimized.append(article_list)
         return minimized
 
-
-    def write_to_excel(self):
-        pass
-
     def manage_crawling(self):
         crawler = web_crawler.WebCrawler(self.web_endpoint, self.api_key,
                                          self.ARTICLES_PER_PAGE, self.number_of_pages)
