@@ -85,9 +85,9 @@ export default function Filtering() {
             ranges={state}
           />
           <container class={'centered'}>
-            <Button class={'btn1 linkstyle'}>
+            <button class={'btn1 linkstyle'}>
               <Link to="/data">Go</Link>
-            </Button>
+            </button>
           </container>
         </div>
       </div>

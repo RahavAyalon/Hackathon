@@ -1,6 +1,5 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
-
 import Box from '@material-ui/core/Box';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -17,12 +16,16 @@ export default function Data() {
           //   textAlign: 'center',
         }}
       >
+        <button class={"btn1 linkstyle"}>
         <Link to="/meta_data.xlsx" target="_blank" download>
           Download Meta Data
         </Link>
+        </button>
+        <button class={"btn1 linkstyle"}>
         <Link to="/contents_by_sentence.xlsx" target="_blank" download>
           Download Parsed Content
         </Link>
+        </button>
 
         <Box color="white" p={1}>
           <Table striped bordered hover size="sm">
