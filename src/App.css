@@ -28,6 +28,11 @@
 }
 .div1 {
   grid-area: 1 / 1 / 2 / 3;
+  margin-left: 250px;
+  margin-right: 250px;
+  display: flex;
+  align-items: end;
+  justify-content: end;
 }
 .div2 {
   grid-area: 2 / 1 / 3 / 3;
@@ -179,3 +184,16 @@
   border: 1px solid rgb(0, 0, 0);
   margin: 5px;
 }
+.buttonHolder {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#inputBar {
+  color: #170987;
+}
+
+/*#button-addon2{*/
+/*  margin: 20px;*/
+
+/*}*/
