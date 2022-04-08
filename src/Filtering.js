@@ -76,7 +76,7 @@ export default function Filtering() {
             ))}
           </Form>
         </div>
-        <div class="div3">
+        <div class="div3" backgroundColor="#000000">
           {' '}
           <DateRange
             editableDateInputs={true}
