@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
-import image from './Logo.png';
+import image from './logo.png';
+
 export default function NavbarComponent() {
   return (
     <Navbar class={'navbar'} bg="light" expand="lg">

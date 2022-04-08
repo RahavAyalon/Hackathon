@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 import InputButton from './InputButton';
 import { Container, Row } from 'react-bootstrap';
-import image from './Logo.png';
+import image from './logo.png';
 export default function Main() {
   return (
     <div class="parent">
