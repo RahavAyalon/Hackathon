@@ -19,7 +19,7 @@ export default function Filtering() {
   return (
     <>
       <div class="parent">
-        <div class="div3">
+        <div class="div4">
           <Form>
             {['checkbox'].map((type) => (
               <>
@@ -27,7 +27,7 @@ export default function Filtering() {
                   <Form.Check
                     type={type}
                     id={`default-${type}`}
-                    label={`Websites`}
+                    label={`Sections`}
                   />
                 </div>
                 <div key={`default-${type}`} className="mb-3">
@@ -69,14 +69,14 @@ export default function Filtering() {
                   <Form.Check
                     type={type}
                     id={`default-${type}`}
-                    label={`Writers`}
+                    label={`Authors`}
                   />
                 </div>
               </>
             ))}
           </Form>
         </div>
-        <div class="div4">
+        <div class="div3">
           {' '}
           <DateRange
             editableDateInputs={true}
@@ -84,11 +84,13 @@ export default function Filtering() {
             moveRangeOnFirstSelection={false}
             ranges={state}
           />
+          <container class={'centered'}>
+            <button class={'btn1 linkstyle'}>
+              <Link to="/data">Go</Link>
+            </button>
+          </container>
         </div>
       </div>
-      <Button variant="light">
-        <Link to="/data">Go</Link>
-      </Button>
     </>
   );
 }
