@@ -14,8 +14,7 @@ export default function Button() {
         {/*<a href="something" className="button1">Button</a>*/}
         <button class={'btn1 linkstyle'}>
           <Link to="/filtering">
-            {' '}
-            <img src="./jazeera.jpeg" alt="my image" />
+            Al Jazeera
           </Link>
         </button>
       </div>
