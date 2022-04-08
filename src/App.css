@@ -95,20 +95,19 @@ justify-content: left;
 /*}*/
 .btn1{
   margin: 30px;
-  background: linear-gradient(to bottom right, #9840ef, #ff91d5);
+  background: linear-gradient(to bottom right, #9840ef, #170987);
   border: 0;
   border-radius: 12px;
-  color: #FFFFFF;
+  color: white;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 2.5;
   outline: transparent;
   padding: 0 1rem;
   text-align: center;
-  text-decoration: none;
+  /*text-decoration: none;*/
   transition: box-shadow .2s ease-in-out;
   user-select: none;
   -webkit-user-select: none;
@@ -152,7 +151,8 @@ justify-content: left;
 }
 .linkstyle a{
   text-decoration: none;
-  color: black;
+  color: white;
+  font-weight: lighter;
 }
 
 #autopus{
