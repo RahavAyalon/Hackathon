@@ -5,6 +5,7 @@ import Data from './Data';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComponent from './Navbar';
+
 function App() {
   return (
     <Router>

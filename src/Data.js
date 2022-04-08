@@ -1,7 +1,6 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import Box from '@material-ui/core/Box';
-import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export default function Data() {
@@ -13,22 +12,21 @@ export default function Data() {
           marginLeft: '10%',
           marginTop: '60px',
           width: '80%',
-            textAlign: 'center',
+          textAlign: 'center',
         }}
       >
-        <div className={"buttonHolder"}>
-        <button class={"btn1 linkstyle"}>
-        <Link to="/meta_data.xlsx" target="_blank" download>
-          Download Meta Data
-        </Link>
-        </button>
-        <button class={"btn1 linkstyle"}>
-        <Link to="/contents_by_sentence.xlsx" target="_blank" download>
-          Download Parsed Content
-        </Link>
-        </button>
+        <div className={'buttonHolder'}>
+          <button class={'btn1 linkstyle'}>
+            <Link to="/meta_data.xlsx" target="_blank" download>
+              Download Meta Data
+            </Link>
+          </button>
+          <button class={'btn1 linkstyle'}>
+            <Link to="/contents_by_sentence.xlsx" target="_blank" download>
+              Download Parsed Content
+            </Link>
+          </button>
         </div>
-
 
         <Box color="white" p={1}>
           <Table striped bordered hover size="sm">
