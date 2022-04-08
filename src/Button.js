@@ -22,20 +22,20 @@ export default function Button() {
           <img
             class="jazz"
             src="wsi-imageoptim-aljazeera.jpeg"
-            width={150}
-            height={150}
+            width={250}
+            height={250}
           />
         </a>
 
         <a href="/filtering" class="bloop">
-          <img class="jazz" src="guardian.jpeg" width={150} height={150} />
+          <img class="jazz" src="guardian.jpeg" width={250} height={250} />
         </a>
         <a href="/filtering" class="bloop">
           <img
             class="jazz"
             src="Forbes_logo_com.svg"
-            width={150}
-            height={150}
+            width={250}
+            height={250}
           />
         </a>
       </div>
