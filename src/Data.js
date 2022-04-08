@@ -13,9 +13,10 @@ export default function Data() {
           marginLeft: '10%',
           marginTop: '60px',
           width: '80%',
-          //   textAlign: 'center',
+            textAlign: 'center',
         }}
       >
+        <div className={"buttonHolder"}>
         <button class={"btn1 linkstyle"}>
         <Link to="/meta_data.xlsx" target="_blank" download>
           Download Meta Data
@@ -26,6 +27,8 @@ export default function Data() {
           Download Parsed Content
         </Link>
         </button>
+        </div>
+
 
         <Box color="white" p={1}>
           <Table striped bordered hover size="sm">
