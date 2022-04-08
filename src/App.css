@@ -61,10 +61,12 @@
   display: block;
   text-align: center;
 }
-/*.navbar{*/
-/*  font-size: xx-large;*/
-/*}*/
-
+.topnav-right {
+  float: right;
+}
+.topnav-left {
+  float: left;
+}
 /*#goButton{*/
 /*  alignment: center;*/
 /*  align-self: center;*/
