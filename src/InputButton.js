@@ -3,7 +3,7 @@ import { Button, FormControl, InputGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 export default function InputButton() {
   return (
-    <InputGroup id={"inputBar"} className="mb-3">
+    <InputGroup className="mb-3">
       <FormControl
         placeholder="URL"
         aria-label="URL"

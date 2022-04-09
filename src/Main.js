@@ -6,6 +6,9 @@ import image from './Logo.png';
 export default function Main() {
   return (
     <div class="parent">
+            <div className={"div5 centered"}>
+                <img src={image} width={200} height={260}/>
+            </div>
             <div className="div1">
                 <InputButton />
             </div>

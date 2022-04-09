@@ -8,7 +8,7 @@ export default function Data() {
     <>
       <div
         style={{
-          marginLeft: '10%',
+          marginRight: '10%',
           marginLeft: '10%',
           marginTop: '60px',
           width: '80%',
