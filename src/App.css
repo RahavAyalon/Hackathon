@@ -45,16 +45,23 @@ grid-row-gap: 0px;
 
 }
 .div3 {
-  grid-area: 1 / 2 / 5 / 3;
+  grid-area:  2 / 1 / 5 / 3;
   display: grid;
   justify-content: center;
   alignment: center;
   height: min-content;
 }
 .div4 {
-  grid-area: 1 / 3 / 5 / 4;
+  grid-area: 2 / 3 / 5 / 5;
   justify-content: right;
   height: min-content;
+}
+
+.divSpace{
+  grid-area: 1 / 1 / 2 / 5;
+  height: 50px;
+  margin-left: 175px;
+  margin-top: 30px;
 }
 
 .centered {
@@ -103,9 +110,7 @@ grid-row-gap: 0px;
     0.125rem 0.125rem 1rem rgba(97, 255, 140, 0.5);
 }
 
-.mb-3 {
-  padding: none;
-}
+
 .linkstyle a {
   text-decoration: none;
   color: white;
@@ -130,4 +135,5 @@ grid-row-gap: 0px;
   display: flex;
   justify-content: space-evenly;
 }
+
 

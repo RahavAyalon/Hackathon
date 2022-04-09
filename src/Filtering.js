@@ -19,6 +19,9 @@ export default function Filtering() {
   return (
     <>
       <div class="parent">
+        <div className={"divSpace"}>
+          Please select the fields for your corpus, then press 'Go':
+        </div>
         <div class="div4">
           <Form>
             {['checkbox'].map((type) => (
