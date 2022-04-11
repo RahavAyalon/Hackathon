@@ -1,6 +1,7 @@
 A Raw Data Collector for the Humanities Academics
 
 ![](assets/screen-1.png)
+![](assets/screen-3.png)
 
 ## Features
 
